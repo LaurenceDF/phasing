@@ -21,7 +21,7 @@ function setup(){
     wave = new Tone.Waveform();
     Tone.Master.connect(wave);
 
-    Tone.Master.volume = -3;
+    Tone.Master.volume = -6;
 
 }
 
@@ -37,6 +37,7 @@ function draw(){
     if (ready){
         osc.frequency.value = map(mouseX, 0, width, 220, 440);
 
+        strokeWeight(4);
         stroke(255);
         let buffer = wave.getValue(0);
 

@@ -8,7 +8,7 @@ let wave;
 
 // canvas to match browser size
 function setup(){
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(window.innerWidth, window.innerHeight);
 
     osc = new Tone.Oscillator();
     osc.frequency.value = 220;
@@ -27,7 +27,7 @@ function setup(){
 
 // on window resize
 function onResize(){
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(window.innerWidth, window.innerHeight);
 }
 
 // main render loop

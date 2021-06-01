@@ -35,7 +35,7 @@ function draw(){
     background(0);
 
     if (ready){
-        osc.frequency.value = map(mouseX, 0, width, 110, 220);
+        osc.frequency.value = map(mouseX, 0, width, 220, 440);
 
         let buffer = wave.getValue(0);
 

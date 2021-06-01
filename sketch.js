@@ -37,6 +37,7 @@ function draw(){
     if (ready){
         osc.frequency.value = map(mouseX, 0, width, 220, 440);
 
+        stroke(255);
         let buffer = wave.getValue(0);
 
         // looks for x-crossing (neg to pos)

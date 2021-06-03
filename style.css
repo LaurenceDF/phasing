@@ -16,5 +16,6 @@ input, button{
 
 #Hz{
     font-size: 25px;
-    font-weight: bold ;
+    font-weight: bold;
+    color: white;
 }

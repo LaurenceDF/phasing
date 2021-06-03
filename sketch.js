@@ -29,7 +29,7 @@ function setup(){
     wave = new Tone.Waveform();
     Tone.Master.connect(wave);
 
-    Tone.Master.volume = -40;
+    Tone.Master.volume.value = -40;
 
 }
 

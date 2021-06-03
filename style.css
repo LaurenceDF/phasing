@@ -4,12 +4,3 @@ body {
     margin: 0;
     background-color: black;
 }
-
-button {
-    margin: 20px;
-    color: #42464d;
-    width: 150px;
-    height: 35px;
-    font-family: "Monaco";
-    background-color: #daf3ff;
-}

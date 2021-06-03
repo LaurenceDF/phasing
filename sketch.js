@@ -8,7 +8,7 @@ let hzSet = document.querySelector('#button');
 let inputSet = document.querySelector('#input-set');
 let Hz = document.querySelector('#Hz');
 
-let freq;
+let freq = 40;
 
 
 
@@ -27,11 +27,11 @@ function setup(){
     });
 
     osc = new Tone.Oscillator();
-    osc.frequency.value = inputSet;
+    osc.frequency.value = freq;
     osc.toDestination();
 
     osc2 = new Tone.Oscillator();
-    osc2.frequency.value = inputSet;
+    osc2.frequency.value = freq;
     osc2.toDestination();
 
     wave = new Tone.Waveform();
@@ -51,7 +51,7 @@ function draw(){
     background(0);
 
     if (ready){
-        osc.frequency.value = map(mouseX, 0, width, inputSet, inputSet*2);
+        osc.frequency.value = map(mouseX, 0, width, freq, freq*2);
 
         strokeWeight(4);
         stroke(255);

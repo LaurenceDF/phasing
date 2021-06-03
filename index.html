@@ -6,12 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" type="text/css" rel="stylesheet">
-    <style>
-        body{
-            padding: 0;
-            margin: 0;
-        }
-    </style>
+
     <script src="lib/p5.js"></script>
     <script src="lib/Tone.js"></script>
     <script src="sketch.js"></script>
@@ -19,23 +14,28 @@
 <body>
     <div class="range">
         <div class="sliderValue">
-            <span>100</span>
+          <span>100</span>
         </div>
-    <div class="field">
-        <div class="value left">0</div>
-        <input type="range" min="0" max="200" value="100" steps="1">
-        <div class="value right">200</div>
-    </div>
-    </div>
-
-    <script>
-        const sliderValue = document.querySelector("span");
-        const inputSlider = document.querySelector("input");
-        inputSlider.oninput = (()=>{
-           let value = inputSlider.value;
-           sliderValue.textContent = value;
-        });
+<div class="field">
+          <div class="value left">
+0</div>
+<input type="range" min="10" max="200" value="100" steps="1">
+          <div class="value right">
+200</div>
+</div>
+</div>
+<script>
+      const slideValue = document.querySelector("span");
+      const inputSlider = document.querySelector("input");
+      inputSlider.oninput = (()=>{
+        let value = inputSlider.value;
+        slideValue.textContent = value;
+        slideValue.style.left = (value/2) + "%";
+        slideValue.classList.add("show");
+      });
+      inputSlider.onblur = (()=>{
+        slideValue.classList.remove("show");
+      });
     </script>
-
-</body>
+  </body>
 </html>

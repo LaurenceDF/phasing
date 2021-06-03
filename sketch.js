@@ -9,22 +9,18 @@ let inputSet = document.querySelector('#input-set');
 let Hz = document.querySelector('#Hz');
 
 hzSet.addEventListener('click', () =>{
-    inputSet.value = Hz.value;
+    Hz.innerText = inputSet.value;
 });
 
 //-------------------------------------------------
 
-function button1(){
-    let str = document.getElementById("text1").value;
 
-}
 
 //---------------------------------------------------
 // canvas to match browser size
 function setup(){
     createCanvas(windowWidth, windowHeight);
 
-    freq = str;
 
     osc = new Tone.Oscillator();
     osc.frequency.value = str;

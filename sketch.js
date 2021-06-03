@@ -23,11 +23,11 @@ function setup(){
 
 
     osc = new Tone.Oscillator();
-    osc.frequency.value = str;
+    osc.frequency.value = Hz;
     osc.toDestination();
 
     osc2 = new Tone.Oscillator();
-    osc2.frequency.value = str;
+    osc2.frequency.value = Hz;
     osc2.toDestination();
 
     wave = new Tone.Waveform();
@@ -47,7 +47,7 @@ function draw(){
     background(0);
 
     if (ready){
-        osc.frequency.value = map(mouseX, 0, width, str, str*2);
+        osc.frequency.value = map(mouseX, 0, width, Hz, Hz*2);
 
         strokeWeight(4);
         stroke(255);

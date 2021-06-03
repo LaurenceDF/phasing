@@ -5,12 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" type="text/css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <script src="lib/p5.js"></script>
     <script src="lib/Tone.js"></script>
     <script src="sketch.js"></script>
+    <script>
+        function func1(){
+            var str = document.getElementById("text1").value;
+            alert("new value is: " +str);
+
+        }
+    </script>
 </head>
 <body>
+    <input id="text1" placeholder="enter Hz value">
+    <br>
+    <button onclick="func1()" id="button">enter</button>
 </body>
 </html>

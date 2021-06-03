@@ -9,8 +9,8 @@ let freq;
 //-------------------------------------------------
 
 function button1(){
-    var str = document.getElementById("text1").value;
-    freq = str;
+    let str = document.getElementById("text1").value;
+
 }
 
 //---------------------------------------------------
@@ -18,6 +18,7 @@ function button1(){
 function setup(){
     createCanvas(windowWidth, windowHeight);
 
+    freq = str;
 
     osc = new Tone.Oscillator();
     osc.frequency.value = 220;

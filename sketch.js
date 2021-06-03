@@ -4,7 +4,13 @@ let osc;
 let osc2;
 
 let wave;
-let freq;
+let hzSet = document.querySelector('#button');
+let inputSet = document.querySelector('#input-set');
+let Hz = document.querySelector('#Hz');
+
+hzSet.addEventListener('click', () =>{
+    inputSet.value = Hz.value;
+});
 
 //-------------------------------------------------
 

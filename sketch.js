@@ -10,13 +10,14 @@ let freq;
 
 function button1(){
     var str = document.getElementById("text1").value;
+    freq = str;
 }
 
 //---------------------------------------------------
 // canvas to match browser size
 function setup(){
     createCanvas(windowWidth, windowHeight);
-    freq = 100;
+
 
     osc = new Tone.Oscillator();
     osc.frequency.value = 220;

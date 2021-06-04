@@ -4,7 +4,7 @@ let osc;
 let osc2;
 
 let wave;
-let freq;
+
 
 
 
@@ -21,14 +21,13 @@ let freq;
 function setup(){
     createCanvas(windowWidth, windowHeight);
 
-    freq = 668;
 
     osc = new Tone.Oscillator();
-    osc.frequency.value = freq;
+    osc.frequency.value = 220;
     osc.toDestination();
 
     osc2 = new Tone.Oscillator();
-    osc2.frequency.value = freq;
+    osc2.frequency.value = 220;
     osc2.toDestination();
 
     wave = new Tone.Waveform();
@@ -48,7 +47,7 @@ function draw(){
     background(0);
 
     if (ready){
-        osc.frequency.value = map(mouseX, 0, width, setHz(), setHz()*2);
+        osc.frequency.value = map(mouseX, 0, width, 220, 220*2);
 
         strokeWeight(4);
         stroke(255);

@@ -17,7 +17,7 @@ let freq;
 //---------------------------------------------------
 
 function setHz(){
-    var hz = Number.document.getElementById("input").value;
+    var hz = document.getElementById("input").value;
     return hz;
 }
 

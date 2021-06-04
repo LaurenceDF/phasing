@@ -8,30 +8,33 @@ let hzSet = document.querySelector('#button');
 let inputSet = document.querySelector('#input-set');
 let Hz = document.querySelector('#Hz');
 
-let freq = 40;
+let freq;
 
 
 
 //-------------------------------------------------
+function setNewHz(freq){
+    return freq;
+}
 
-
+function getHz() {
+    var num = Number(document.getElementById('set Hz').value);
+    var newFreq = setNewHz(freq);
+}
 
 //---------------------------------------------------
 // canvas to match browser size
 function setup(){
     createCanvas(windowWidth, windowHeight);
 
-    hzSet.addEventListener('click', () =>{
-        Hz.innerText = inputSet.value;
 
-    });
 
     osc = new Tone.Oscillator();
-    osc.frequency.value = 45;
+    osc.frequency.value = freq;
     osc.toDestination();
 
     osc2 = new Tone.Oscillator();
-    osc2.frequency.value = 45;
+    osc2.frequency.value = freq;
     osc2.toDestination();
 
     wave = new Tone.Waveform();
@@ -51,7 +54,7 @@ function draw(){
     background(0);
 
     if (ready){
-        osc.frequency.value = map(mouseX, 0, width, 45, 45*2);
+        osc.frequency.value = map(mouseX, 0, width, freq, freq*2);
 
         strokeWeight(4);
         stroke(255);
@@ -94,5 +97,7 @@ function mousePressed(){
         osc.start();
         osc2.start();
         ready = true;
+
+        document.getElementById('setFreq').addEventListener('click', getHz);
     }
 }

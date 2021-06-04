@@ -5,26 +5,28 @@ let osc2;
 
 let wave;
 
-let freq = Number(document.getElementById('setHz').value);
 
 
 
 //-------------------------------------------------
 
+function setFreq(){
+    var freq = document.getElementById('setHz')
+}
 
 //---------------------------------------------------
 // canvas to match browser size
 function setup(){
     createCanvas(windowWidth, windowHeight);
 
-
+    var freq = setFreq();
 
     osc = new Tone.Oscillator();
-    osc.frequency.value = freq();
+    osc.frequency.value = freq;
     osc.toDestination();
 
     osc2 = new Tone.Oscillator();
-    osc2.frequency.value = freq();
+    osc2.frequency.value = freq;
     osc2.toDestination();
 
     wave = new Tone.Waveform();
@@ -44,7 +46,7 @@ function draw(){
     background(0);
 
     if (ready){
-        osc.frequency.value = map(mouseX, 0, width, freq(), freq()*2);
+        osc.frequency.value = map(mouseX, 0, width, freq, freq*2);
 
         strokeWeight(4);
         stroke(255);

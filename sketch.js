@@ -24,7 +24,7 @@ function setup(){
     createCanvas(windowWidth, windowHeight);
 
     button = createButton("set hz");
-    button.position(40, 0);
+    button.position(400, 0);
     button.mousePressed(changeHz);
 
     osc = new Tone.Oscillator();

@@ -50,7 +50,7 @@ function draw(){
     background(0);
 
     if (ready){
-        osc.frequency.value = map(mouseX, 0, width, setHz(), setHz(*2);
+        osc.frequency.value = map(mouseX, 0, width, setHz(), setHz()*2);
 
         strokeWeight(4);
         stroke(255);

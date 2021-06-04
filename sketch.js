@@ -5,13 +5,15 @@ let osc2;
 
 let wave;
 
+let setHz;
+let button;
+
 
 
 
 
 
 //-------------------------------------------------
-
 
 
 //---------------------------------------------------
@@ -21,6 +23,9 @@ let wave;
 function setup(){
     createCanvas(windowWidth, windowHeight);
 
+    button = createButton("set hz");
+    button.position(40, 0);
+    button.mousePressed(changeHz);
 
     osc = new Tone.Oscillator();
     osc.frequency.value = 220;
@@ -41,6 +46,14 @@ function setup(){
 function onResize(){
     resizeCanvas(windowWidth, windowHeight);
 }
+//-------------------------------------------------------
+
+function changeHz(){
+    let freq = document.getElementById("input").value;
+    return freq;
+}
+
+//-------------------------------------------------------
 
 // main render loop
 function draw(){

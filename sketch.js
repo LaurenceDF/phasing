@@ -16,17 +16,12 @@ let freq;
 
 //---------------------------------------------------
 
-function setHz(){
-    var hz = 680;
-    return hz;
-}
-
 //---------------------------------------------------
 // canvas to match browser size
 function setup(){
     createCanvas(windowWidth, windowHeight);
 
-    freq = setHz();
+    freq = 668;
 
     osc = new Tone.Oscillator();
     osc.frequency.value = freq;

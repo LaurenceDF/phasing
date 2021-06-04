@@ -5,7 +5,7 @@ let osc2;
 
 let wave;
 
-let freq = Number(document.getElementById('set Hz').value);
+let freq = Number(document.getElementById('setHz').value);
 
 
 

@@ -5,17 +5,3 @@ body {
     background-color: black;
 }
 
-.container {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-input, button{
-    height: 25px;
-}
-
-#Hz{
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-}
